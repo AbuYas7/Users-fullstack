@@ -1,0 +1,61 @@
+.account_card {
+  width: 450px;
+  height: 480px;
+  margin: auto;
+  margin-top: 60px;
+  box-shadow: 4px 4px 29px 0px rgba(34, 60, 80, 0.2);
+  border-radius: 10px;
+}
+
+.info {
+  text-align: left;
+}
+
+.name {
+  font-size: 40px;
+}
+
+.age {
+  font-size: 30px;
+}
+
+.image {
+  height: 60%;
+}
+
+.change_data{
+    width: 200px;
+    height: 30px;
+    margin-bottom: 20px;
+    background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.change_data:hover{
+    background: #577c5b;
+}
+
+.editInfo {
+  width: 20px;
+  height: 20px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/61/61094.png');
+}
+
+.btnInfo {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background-size: 100%;
+  background-position: center;
+  cursor: pointer;
+  transition: 500ms;
+  margin-left: 15px;}
+
+.btnSett:hover {
+  transform: rotate(30deg);
+  transition: 150ms;
+}
+

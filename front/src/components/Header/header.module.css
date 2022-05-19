@@ -1,0 +1,67 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+    background-color: #494544;
+    height: 50px;
+    position: fixed;
+    left:0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.people{
+    color: white;
+    text-align: center;
+    align-items: center;
+    line-height: 40px;
+}
+
+.input{
+    line-height: 40px;
+}
+
+.input input{
+    width: 400px;
+    border-radius: 10px;
+    color: white;
+    background-color: #504b4a;
+}
+
+.my_account{
+    display: flex;
+    line-height: 10px;
+    color: aliceblue;
+}
+
+.photo{
+    line-height: 60px;
+    margin-left: 15px;
+}
+
+.photo img{
+    width: 30px;
+    border-radius: 20px;
+}
+
+.but_exit{
+    width: 100px;
+    height: 20px;
+    margin-top: 14px;
+    border-radius: 5px;
+    color: white;
+    background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+    border: none;
+    cursor: pointer;
+}
+
+.no_account{
+    color: white;
+    margin: 0;
+    line-height: 45px;
+}
+
+.but_exit:hover{
+    background: #577c5b;
+
+}

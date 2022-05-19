@@ -1,0 +1,28 @@
+.user_card {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.info {
+  width: 240px;
+  height: 150px;
+  background-color: rgb(255, 255, 255);
+  margin: 20px;
+  padding: 10px;
+  height: 250px;
+  align-items: baseline;
+  box-shadow: 4px 4px 29px 0px rgba(34, 60, 80, 0.2);
+  border-radius: 10px;
+}
+
+.info_user {
+  text-align: left;
+}
+
+.image {
+  height: 70%;
+}
