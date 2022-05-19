@@ -21,7 +21,7 @@ const SignUp = () => {
   const [nameErr, setNameErr] = useState(false);
   const [mailErr, setMailErr] = useState(false);
   const [passwordErr, setPasswordErr] = useState(false);
-  const [birthdayErr, setBirthdayErr] = useState(new Date());
+  const [birthdayErr, setBirthdayErr] = useState();
   const [genderErr, setGenderErr] = useState(false);
   const [imageErr, setImageErr] = useState(false);
   const [generalErr, setGeneralErr] = useState(true);

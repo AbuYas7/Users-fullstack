@@ -3,14 +3,14 @@ import styles from "./edit.module.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { editAvatar, editUser } from "../../../redux/features/user";
+import { useNavigate } from "react-router-dom";
 
 const EditAccount = ({ showEdit, handleShowEdit, user }) => {
   const dispatch = useDispatch();
 
-  const [name, setName] = useState(user.executor);
-  const [image, setImage] = useState(user.phone);
-  const [password, setPassword] = useState(user.city);
-  const [stop, setStop] = useState(false);
+  const [name, setName] = useState(user.name);
+  const [image, setImage] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleName = (e) => {
     setName(e.target.value);
@@ -25,8 +25,8 @@ const EditAccount = ({ showEdit, handleShowEdit, user }) => {
   };
 
   const handleEditInfo = async () => {
-      dispatch(editAvatar(image));
     dispatch(editUser(name, password));
+    editAvatar(image);
     handleShowEdit();
   };
 
@@ -56,7 +56,7 @@ const EditAccount = ({ showEdit, handleShowEdit, user }) => {
                   value={name}
                   onChange={handleName}
                   style={{ width: "100%" }}
-                  placeholder="Необходимо ввести имя"
+                  placeholder="Введите новое имя"
                 />
               </div>
             </div>
@@ -94,7 +94,7 @@ const EditAccount = ({ showEdit, handleShowEdit, user }) => {
                   value={password}
                   onChange={handlePassword}
                   style={{ width: "100%" }}
-                  placeholder="Необходимо ввести пароль"
+                  placeholder="Введите новый пароль"
                 />
               </div>
             </div>
@@ -106,7 +106,7 @@ const EditAccount = ({ showEdit, handleShowEdit, user }) => {
                 margin: "10px 0",
               }}
             >
-              {stop ? "Пожалуйста, обновите данные перед отправкой" : ""}
+              {" "}
             </div>
             <div style={{ textAlign: "center", margin: "15px 0" }}>
               <button

@@ -13,6 +13,8 @@ const Account = () => {
   const dispatch = useDispatch();
   const params = useParams();
 
+  const [showEdit, setShowEdit] = useState(false);
+
   useEffect(() => {
     dispatch(fetchUser());
   }, [dispatch]);
@@ -31,8 +33,6 @@ const Account = () => {
   }
 
   const age = getAge(user1?.birthday);
-
-  const [showEdit, setShowEdit] = useState(false);
 
   const handleShowEdit = () => {
     setShowEdit(!showEdit);
@@ -74,7 +74,7 @@ const Account = () => {
               <EditAccount
                 showEdit={showEdit}
                 handleShowEdit={handleShowEdit}
-                user={user}
+                user={user1}
               />
             </div>
           </div>

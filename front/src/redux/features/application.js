@@ -2,7 +2,6 @@ const initialState = {
   signingUp: false,
   singingIn: false,
   error: null,
-  done: false,
   token: localStorage.getItem("token"),
   Id: localStorage.getItem("Id"),
 };
@@ -15,7 +14,6 @@ export default function application(state = initialState, action) {
         signingUp: true,
         singingIn: false,
         error: null,
-        done: false,
       };
     case "application/signup/rejected":
       return {
@@ -23,7 +21,6 @@ export default function application(state = initialState, action) {
         signingUp: false,
         singingIn: false,
         error: action.error,
-        done: false,
       };
     case "application/signup/fulfilled":
       return {
@@ -31,7 +28,6 @@ export default function application(state = initialState, action) {
         signingUp: false,
         singingIn: false,
         error: null,
-        done: true,
       };
     case "application/signin/pending":
       return {
@@ -39,8 +35,6 @@ export default function application(state = initialState, action) {
         signingUp: false,
         singingIn: false,
         error: null,
-        done: false,
-        role: null,
       };
     case "application/signin/rejected":
       return {
@@ -48,8 +42,6 @@ export default function application(state = initialState, action) {
         signingUp: false,
         singingIn: false,
         error: action.error,
-        done: false,
-        role: null,
       };
     case "application/signin/fulfilled":
       return {
@@ -57,10 +49,8 @@ export default function application(state = initialState, action) {
         signingUp: false,
         singingIn: false,
         error: null,
-        done: true,
         token: action.payload.token,
         Id: action.payload.id,
-        role: action.payload.role,
       };
     case "application/logout/fulfilled":
       return {

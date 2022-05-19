@@ -2,7 +2,6 @@ const initialState = {
   loading: false,
   error: null,
   user: [],
-  userById: null,
 };
 
 export default function user(state = initialState, action) {
@@ -25,25 +24,6 @@ export default function user(state = initialState, action) {
         loading: false,
         error: null,
         user: action.payload,
-      };
-    case "userById/fetch/pending":
-      return {
-        ...state,
-        loading: true,
-        error: null,
-      };
-    case "userById/fetch/rejected":
-      return {
-        ...state,
-        loading: true,
-        error: action.error,
-      };
-    case "userById/fetch/fulfilled":
-      return {
-        ...state,
-        loading: false,
-        error: null,
-        userById: action.payload,
       };
     case "user/edit/pending":
       return {
