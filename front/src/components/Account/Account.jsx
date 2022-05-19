@@ -5,6 +5,7 @@ import { fetchUser } from "../../redux/features/user";
 import Header from "../Header/Header";
 import styles from "./account.module.css";
 import EditAccount from "./EditAccountModal/EditAccount";
+import logo from "../../assets/default.png";
 
 const Account = () => {
   const user = useSelector((state) => state.user.user);
@@ -44,7 +45,15 @@ const Account = () => {
         <div className={styles.account}>
           <div className={styles.account_card}>
             <div className={styles.image}>
-              <img src={`http://localhost:4000/${user1?.image}`} alt="phot" />
+              {user1?.image ? (
+                <img
+                  style={{ width: "100%" }}
+                  src={`http://localhost:4000/${user1?.image}`}
+                  alt="phot"
+                />
+              ) : (
+                <img style={{ width: "65%" }} src={logo} alt="" />
+              )}
             </div>
             <div className={styles.info}>
               <span className={styles.name}>Ваше имя: {user1.name}</span>

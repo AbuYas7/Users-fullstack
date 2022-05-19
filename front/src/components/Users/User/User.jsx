@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUser } from "../../../redux/features/user";
 import styles from "./user.module.css";
+import logo from '../../../assets/default.png'
 
 const User = ({ image }) => {
   const dispatch = useDispatch();
@@ -34,11 +35,12 @@ const usersWithoutCurrent = user?.filter((item, i) => {
 
   return (
     <div className={styles.user_card}>
-      {usersWithoutCurrent?.map((data, i) => {
+      {usersWithoutCurrent?.map((data) => {
+        console.log(data);
         return (
           <div key={data.id} className={styles.info} >
             <div className={styles.image}>
-             <img src={`http://localhost:4000/${data?.image}`} alt="phot" />
+             {data?.image ? <img style={{width: "65%"}} src={`http://localhost:4000/${data?.image}`} alt="phot" /> : <img src={logo} alt="" /> }
             </div>
             <div className={styles.info_user}>
               <div className={styles.name}>Имя:{data?.name}</div>
