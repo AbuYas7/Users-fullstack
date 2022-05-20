@@ -18,6 +18,7 @@ const Header = () => {
   };
   
   return (
+    <header>
     <div className={styles.header}>
       <Link to={"/people"}>
         <div className={styles.people}>Accounts</div>
@@ -50,6 +51,7 @@ const Header = () => {
         )}
       </div>
     </div>
+    </header>
   );
 };
 
